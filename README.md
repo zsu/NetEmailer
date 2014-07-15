@@ -19,9 +19,6 @@ Let's dive into the code. In the class that you want to send an email, implement
 Now you only need two lines of codes to create the email and send it out. Emailer.BuildMessage is a static function that take the template file full path, the email section key( Different emails are distinguished by key in the template file) and the class that implements the IParameterProvider as inputs and return an EmailMessage object which contains all the information of the specific email and has the codebloacks substituted with the dynamic information. Then you just call the Send() or SendAsyn() function on the EmailMessage object.
 ~~~xml
         public class EmailerTest:IParameterProvider
-
-       
-
         {
 
                ...
