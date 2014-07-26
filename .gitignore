@@ -37,8 +37,11 @@ Icon
 #NuGet
 packages
 !packages/repositories.config
-bin
-obj
-Debug
-Release
-Logs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ll]ogs/
+[Pp]ublishProfiles/
+*.suo
+*.user
