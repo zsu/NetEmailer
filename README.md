@@ -209,3 +209,6 @@ CodeBlocks are placeholder for dynamic information. The syntax of CodeBlock is {
 #Summary
 
 With one configuration file and two lines of codes, you have all the power and flexibility to create all the emails. And don't forget the configuration file( Email templates) can be change on the fly. Enjoy coding!
+
+#License
+All source code is licensed under MIT license - http://www.opensource.org/licenses/mit-license.php
