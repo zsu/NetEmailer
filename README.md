@@ -1,4 +1,4 @@
-#NetEmailer
+# NetEmailer
 
  Template based email creation with dynamic contents
 
@@ -7,13 +7,13 @@ NetEmailer is a .net email library to provide xml template based email creation 
 Every aspect of an email is configurable in the template files and dynamic contents can be injected during runtime. 
 Change to the template file can be made anytime without restarting the running application.
 
-#Background
+# Background
 
 Sending emails like pass word change confirmation is a common task for applications. 
 Quite often we need to send out emails that have almost the same contents with just a few things differed, for example, user name or the dynamically generated password. 
 The purpose of this library is to provide a flexible way to fullfill this job across different projects.
 
-#Using the code
+# Using the code
 
 Let's dive into the code. In the class that you want to send an email, implements the IParameterProvider interface. There is only one method in this interface: GetProperty, which is used to provide dynamic information to substitue the codeblock(the syntax is {=key}) in the template file(we will come to the detail of this later).
 Now you only need two lines of codes to create the email and send it out. Emailer.BuildMessage is a static function that take the template file full path, the email section key( Different emails are distinguished by key in the template file) and the class that implements the IParameterProvider as inputs and return an EmailMessage object which contains all the information of the specific email and has the codebloacks substituted with the dynamic information. Then you just call the Send() or SendAsyn() function on the EmailMessage object.
@@ -78,7 +78,7 @@ Now you only need two lines of codes to create the email and send it out. Emaile
         }
 ~~~
 
-#Configuration file
+# Configuration file
 
 All email templates are defined in a single xml configuration file. The following is the Emailer.config included in the attached unit test project.
 ~~~xml
@@ -206,9 +206,9 @@ CodeBlocks are placeholder for dynamic information. The syntax of CodeBlock is {
 {=DoubleQuote}: Double Quote
 {=SingleQuote}: Single Quote
 
-#Summary
+# Summary
 
 With one configuration file and two lines of codes, you have all the power and flexibility to create all the emails. And don't forget the configuration file( Email templates) can be change on the fly. Enjoy coding!
 
-#License
+# License
 All source code is licensed under MIT license - http://www.opensource.org/licenses/mit-license.php
